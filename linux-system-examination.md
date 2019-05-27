@@ -1,7 +1,7 @@
 # Linux initial system examination (Ubuntu 18.04 LTS):
 
 Use these steps to examine if linux box was compromised or not. Examples are from the encountered mining attack on Jenkins server.
-If attacker gets a root access, everything can be masked with a rootkit (use intuition). Also some operations affects
+If attacker gets a root access, everything can be masked with a rootkit (use intuition). Also note that some operations affects
 lots of files and can damage attacker fingerprint.
 
 
