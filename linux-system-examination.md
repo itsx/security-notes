@@ -26,14 +26,22 @@ Check that this configuration looks ok.
 
 `lsof -i`
 
+Check any open connection if it is not a malware. For example:
+```
+trace     31646         jenkins   10u  IPv4 68791438      0t0  TCP ci-test.trigema.cz:49314->193.56.28.19:http-alt (ESTABLISHED)
+-bash     31692         jenkins   11u  IPv4 68819778      0t0  TCP ci-test.trigema.cz:41716->static.27.12.130.94.clients.your-server.de:http (ESTABLISHED)
+watchbog  31848         jenkins   11u  IPv4 68532581      0t0  TCP ci-test.trigema.cz:60472->ns3082757.ip-91-121-2.eu:http (ESTABLISHED)
+watchbog  31848         jenkins   12u  IPv4 68831379      0t0  TCP ci-test.trigema.cz:51152->185.92.222.223.vultr.com:3333 (ESTABLISHED)
+
+```
 
 ### 5.List users:
 
-`more etc/passwd`
+`more /etc/passwd`
 
 ### 6.Look at scheduled jobs:
 
-`more etc/crontab`
+`more /etc/crontab`
 
 
 ### List processes
