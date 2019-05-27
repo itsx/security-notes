@@ -5,14 +5,14 @@ If attacker get a root access, everything can be masked with a rootkit.
 
 
 
-### 1.Look at event log files at `/var/log`:
+### 1. Look at event log files at `/var/log`:
 
 `sudo less /var/log/auth.log`
 
 Examine any suspicious logevents deeper, wheather it is a normal even or not. For example:
 `May 27 07:11:17 ci-test CRON[1783]: pam_unix(cron:session): session closed for user jenkins`
 
-### 2.List security events:
+### 2. List security events:
 
 `who`
 `last`
@@ -20,14 +20,14 @@ Examine any suspicious logevents deeper, wheather it is a normal even or not. Fo
 
 Check that there are no suspisious users, logins ...
 
-### 3.Examine network configuration:
+### 3. Examine network configuration:
 
 `arp -np`
 `route`
 
 Check that network configuration looks ok.
 
-### 4.List nerwork connections and related details:
+### 4. List nerwork connections and related details:
 
 `lsof -i`
 
@@ -42,28 +42,33 @@ watchbog  31848         jenkins   12u  IPv4 68831379      0t0  TCP ci-test.trige
 alternatively:
 `netstat –nap`
 
-### 5.List users:
+### 5. List users:
 
 `more /etc/passwd`
 
-### 6.Look at scheduled jobs:
+### 6. Look at scheduled jobs:
 
-`more /etc/crontab`
+```
+more /etc/crontab
+ls -al /etc/cron.daily
+ls -al /etc/cron.weekly
+ls -al /etc/cron.monthly/
+...
+```
 
-
-### 7.List processes
+### 7. List processes
 
 `ps -aux`
 
-### 8.Find recently modified files (affects lots of files!)
+### 8. Find recently modified files (affects lots of files!)
 
 ### 9. Look for suspicious files
 
 These paths are commonly used for hiding scripts or binaries. Look for misspelled names, hidden files/directories, directories with filenames etc ... :
-``
-ls -al /tmp
+```
+ls -al /tmp 
 ls -al /dev/shm
-``
+```
 
 
 
