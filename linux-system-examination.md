@@ -82,8 +82,8 @@ ls -al /dev/shm
 root:*:17643:0:99999:7:::
 ```
 
-Cheetsheets & resources:
-https://zeltser.com/media/docs/security-incident-survey-cheat-sheet.pdf
+Cheetsheets & resources:   
+https://zeltser.com/media/docs/security-incident-survey-cheat-sheet.pdf  
 http://www.deer-run.com/~hal/MWVLUG-detecting.pdf
 
 
